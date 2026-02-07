@@ -211,6 +211,19 @@
             background-color: #0c3a7a;
         }
 
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+        }
+
         /* Sobre */
         .about {
             background-color: var(--light);
@@ -341,6 +354,126 @@
             transform: translateX(5px);
         }
 
+        /* Páginas Detalhadas das Áreas */
+        .area-detail {
+            background-color: var(--light);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+            display: none;
+        }
+
+        .area-detail-header {
+            padding: 40px;
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .area-detail-header h3 {
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .area-detail-icon {
+            background-color: var(--secondary);
+            color: var(--primary);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .area-detail-content {
+            padding: 50px;
+        }
+
+        .area-detail-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .area-detail-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .area-detail-section h4 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .area-detail-section h4 i {
+            color: var(--secondary);
+        }
+
+        .area-detail-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .area-detail-section ul li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            color: var(--gray);
+        }
+
+        .area-detail-section ul li:before {
+            content: '•';
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .service-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-item h5 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .service-item p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .area-detail-footer {
+            padding: 30px 50px;
+            background-color: white;
+            border-top: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
         /* Equipe */
         .team {
             background-color: var(--light);
@@ -402,6 +535,172 @@
             color: var(--gray);
             font-size: 0.9rem;
             margin-bottom: 20px;
+        }
+
+        /* Perfis Detalhados */
+        .profiles {
+            background-color: white;
+        }
+
+        .profiles .section-title p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-top: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .profile-detail {
+            background-color: var(--light);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            margin-bottom: 60px;
+            display: none;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            padding: 40px;
+            background-color: var(--primary);
+            color: white;
+            gap: 40px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--secondary);
+            flex-shrink: 0;
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-basic-info {
+            flex: 1;
+        }
+
+        .profile-basic-info h3 {
+            font-size: 2.2rem;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .profile-position {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .profile-contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .profile-contact span {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .profile-contact i {
+            color: var(--secondary);
+            width: 20px;
+        }
+
+        .profile-content {
+            padding: 50px;
+        }
+
+        .profile-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .profile-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .profile-section h4 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-section h4 i {
+            color: var(--secondary);
+        }
+
+        .profile-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .profile-section ul li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            color: var(--gray);
+        }
+
+        .profile-section ul li:before {
+            content: '•';
+            color: var(--secondary);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .specializations {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .specialization-tag {
+            background-color: var(--light-gray);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid #ddd;
+        }
+
+        .specialization-tag:hover {
+            background-color: var(--primary);
+            color: white;
+            cursor: default;
+            transform: translateY(-2px);
+            transition: var(--transition);
+        }
+
+        .profile-footer {
+            padding: 30px 50px;
+            background-color: white;
+            border-top: 1px solid var(--light-gray);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
         /* Contato */
@@ -467,6 +766,57 @@
         .contact-form textarea {
             height: 150px;
             resize: vertical;
+        }
+
+        .whatsapp-options {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .whatsapp-options h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .whatsapp-btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .whatsapp-option {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            transition: var(--transition);
+            text-decoration: none;
+            color: #e0e0e0;
+        }
+
+        .whatsapp-option:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-option i {
+            color: #25D366;
+            font-size: 1.2rem;
+        }
+
+        .whatsapp-option span {
+            flex: 1;
+            font-size: 0.95rem;
+        }
+
+        .whatsapp-option .fa-external-link-alt {
+            color: var(--secondary);
+            font-size: 0.9rem;
         }
 
         /* Footer */
@@ -566,7 +916,7 @@
             font-size: 0.9rem;
         }
 
-        /* Botão WhatsApp */
+        /* Botões WhatsApp */
         .whatsapp-button {
             position: fixed;
             bottom: 30px;
@@ -628,6 +978,25 @@
             h2 {
                 font-size: 2.2rem;
             }
+            
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+            
+            .profile-img {
+                width: 180px;
+                height: 180px;
+            }
+            
+            .profile-contact {
+                align-items: center;
+            }
+            
+            .service-list {
+                grid-template-columns: 1fr;
+            }
         }
 
         @media (max-width: 768px) {
@@ -670,6 +1039,42 @@
             
             .section-padding {
                 padding: 70px 0;
+            }
+            
+            .profile-header {
+                padding: 30px 20px;
+            }
+            
+            .profile-content {
+                padding: 30px 20px;
+            }
+            
+            .profile-footer {
+                padding: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .profile-basic-info h3 {
+                font-size: 1.8rem;
+            }
+
+            .area-detail-header {
+                padding: 30px 20px;
+            }
+            
+            .area-detail-content {
+                padding: 30px 20px;
+            }
+            
+            .area-detail-footer {
+                padding: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .whatsapp-btn-group {
+                flex-direction: column;
             }
         }
 
@@ -720,6 +1125,7 @@
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#areas">Áreas de Atuação</a></li>
                     <li><a href="#equipe">Equipe</a></li>
+                    <li><a href="#perfis">Perfis</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -773,7 +1179,7 @@
             </div>
             
             <div class="areas-grid">
-                <!-- Área 1 -->
+                <!-- Área 1 - Direito Empresarial -->
                 <div class="area-card">
                     <div class="area-icon">
                         <i class="fas fa-briefcase"></i>
@@ -781,11 +1187,11 @@
                     <div class="area-content">
                         <h3>Direito Empresarial</h3>
                         <p>Assessoria jurídica completa para empresas, incluindo constituição, contratos, fusões, aquisições e reestruturações societárias.</p>
-                        <a href="#" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#detalhe-empresarial" class="area-link ver-area" data-area="empresarial">Saiba mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <!-- Área 2 -->
+                <!-- Área 2 - Direito Tributário -->
                 <div class="area-card">
                     <div class="area-icon">
                         <i class="fas fa-gavel"></i>
@@ -793,11 +1199,11 @@
                     <div class="area-content">
                         <h3>Direito Tributário</h3>
                         <p>Planejamento tributário, consultoria, contencioso administrativo e judicial, recuperação de créditos e defesa em processos fiscais.</p>
-                        <a href="#" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#detalhe-tributario" class="area-link ver-area" data-area="tributario">Saiba mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <!-- Área 3 -->
+                <!-- Área 3 - Direito Trabalhista -->
                 <div class="area-card">
                     <div class="area-icon">
                         <i class="fas fa-users"></i>
@@ -805,11 +1211,11 @@
                     <div class="area-content">
                         <h3>Direito Trabalhista</h3>
                         <p>Assessoria preventiva e contenciosa trabalhista, elaboração de contratos, negociações coletivas e defesa em processos trabalhistas.</p>
-                        <a href="#" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#detalhe-trabalhista" class="area-link ver-area" data-area="trabalhista">Saiba mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <!-- Área 4 -->
+                <!-- Área 4 - Direito Imobiliário -->
                 <div class="area-card">
                     <div class="area-icon">
                         <i class="fas fa-home"></i>
@@ -817,11 +1223,11 @@
                     <div class="area-content">
                         <h3>Direito Imobiliário</h3>
                         <p>Assessoria em transações imobiliárias, due diligence, regularização de propriedades, contratos de compra e venda, financiamentos.</p>
-                        <a href="#" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#detalhe-imobiliario" class="area-link ver-area" data-area="imobiliario">Saiba mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <!-- Área 5 -->
+                <!-- Área 5 - Direito de Família -->
                 <div class="area-card">
                     <div class="area-icon">
                         <i class="fas fa-heart"></i>
@@ -829,11 +1235,11 @@
                     <div class="area-content">
                         <h3>Direito de Família</h3>
                         <p>Divórcios, inventários, partilhas de bens, guarda de filhos, alimentos, adoção, planejamento patrimonial familiar e sucessório.</p>
-                        <a href="#" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#detalhe-familia" class="area-link ver-area" data-area="familia">Saiba mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
-                <!-- Área 6 -->
+                <!-- Área 6 - Direito Digital -->
                 <div class="area-card">
                     <div class="area-icon">
                         <i class="fas fa-user-shield"></i>
@@ -841,10 +1247,230 @@
                     <div class="area-content">
                         <h3>Direito Digital</h3>
                         <p>Proteção de dados (LGPD), compliance digital, contratos eletrônicos, crimes cibernéticos, propriedade intelectual na internet.</p>
-                        <a href="#" class="area-link">Saiba mais <i class="fas fa-arrow-right"></i></a>
+                        <a href="#detalhe-digital" class="area-link ver-area" data-area="digital">Saiba mais <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Páginas Detalhadas das Áreas -->
+    <section class="section-padding" id="detalhes-areas">
+        <div class="container">
+            <!-- Direito Empresarial -->
+            <div class="area-detail" id="detalhe-empresarial">
+                <div class="area-detail-header">
+                    <div class="area-detail-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Direito Empresarial</h3>
+                    <p>Assessoria jurídica completa para empresas de todos os portes e segmentos</p>
+                </div>
+                
+                <div class="area-detail-content">
+                    <div class="area-detail-section">
+                        <h4><i class="fas fa-check-circle"></i> Serviços Oferecidos</h4>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <h5>Constituição de Empresas</h5>
+                                <p>Abertura, registro e legalização de sociedades empresariais (LTDA, S/A, EIRELI), análise da melhor estrutura societária.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Contratos Empresariais</h5>
+                                <p>Elaboração, análise e negociação de contratos societários, comerciais, de prestação de serviços, distribuição e franquia.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Fusões e Aquisições</h5>
+                                <p>Due diligence, negociação, estruturação de operações de M&A, integração pós-fusão e compliance.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Reestruturação Societária</h5>
+                                <p>Transformação, incorporação, cisão, dissolução e liquidação de sociedades, alterações contratuais.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Governança Corporativa</h5>
+                                <p>Implementação de boas práticas de governança, códigos de conduta, políticas internas e compliance.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Recuperação Judicial</h5>
+                                <p>Planejamento preventivo, elaboração e acompanhamento de planos de recuperação empresarial.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="area-detail-section">
+                        <h4><i class="fas fa-bullseye"></i> Benefícios</h4>
+                        <ul>
+                            <li>Segurança jurídica nas operações empresariais</li>
+                            <li>Otimização da estrutura societária e tributária</li>
+                            <li>Prevenção de litígios e redução de riscos</li>
+                            <li>Conformidade com a legislação aplicável</li>
+                            <li>Proteção do patrimônio empresarial</li>
+                            <li>Agilidade na resolução de questões jurídicas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="area-detail-section">
+                        <h4><i class="fas fa-users"></i> Clientes Atendidos</h4>
+                        <ul>
+                            <li>Pequenas e médias empresas em fase de crescimento</li>
+                            <li>Grandes corporações nacionais e multinacionais</li>
+                            <li>Startups e empresas de tecnologia</li>
+                            <li>Grupos empresariais familiares</li>
+                            <li>Investidores e fundos de private equity</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="area-detail-footer">
+                    <a href="#areas" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Voltar para Áreas</a>
+                    <a href="#contato" class="btn"><i class="fas fa-calendar-check"></i> Agendar Consulta</a>
+                </div>
+            </div>
+            
+            <!-- Direito Tributário -->
+            <div class="area-detail" id="detalhe-tributario" style="display: none;">
+                <div class="area-detail-header">
+                    <div class="area-detail-icon">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3>Direito Tributário</h3>
+                    <p>Planejamento tributário estratégico e defesa em processos fiscais</p>
+                </div>
+                
+                <div class="area-detail-content">
+                    <div class="area-detail-section">
+                        <h4><i class="fas fa-check-circle"></i> Serviços Oferecidos</h4>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <h5>Planejamento Tributário</h5>
+                                <p>Análise da melhor estrutura tributária, aproveitamento de incentivos fiscais, elisão fiscal legal.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Consultoria Tributária</h5>
+                                <p>Orientação sobre obrigações acessórias, interpretação de legislação, análise de impactos fiscais.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Contencioso Administrativo</h5>
+                                <p>Defesa em autuações fiscais, recursos administrativos, acordos e parcelamentos perante os fiscos.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Contencioso Judicial</h5>
+                                <p>Ações judiciais para discussão de créditos tributários, mandados de segurança, execuções fiscais.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Recuperação de Créditos</h5>
+                                <p>Restituição e compensação de tributos pagos indevidamente, aproveitamento de prejuízos fiscais.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Due Diligence Fiscal</h5>
+                                <p>Análise de passivos e riscos tributários em operações de M&A, auditorias fiscais preventivas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="area-detail-section">
+                        <h4><i class="fas fa-bullseye"></i> Benefícios</h4>
+                        <ul>
+                            <li>Redução da carga tributária legalmente</li>
+                            <li>Prevenção de autuações e multas fiscais</li>
+                            <li>Recuperação de créditos tributários</li>
+                            <li>Segurança jurídica nas operações</li>
+                            <li>Otimização do fluxo de caixa</li>
+                            <li>Conformidade com legislação tributária</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="area-detail-section">
+                        <h4><i class="fas fa-users"></i> Clientes Atendidos</h4>
+                        <ul>
+                            <li>Empresas de todos os portes e segmentos</li>
+                            <li>Grupos empresariais com operações complexas</li>
+                            <li>Empresas em processo de internacionalização</li>
+                            <li>Investidores estrangeiros no Brasil</li>
+                            <li>Empresas em recuperação judicial</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="area-detail-footer">
+                    <a href="#areas" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Voltar para Áreas</a>
+                    <a href="#contato" class="btn"><i class="fas fa-calendar-check"></i> Agendar Consulta</a>
+                </div>
+            </div>
+            
+            <!-- Direito Trabalhista -->
+            <div class="area-detail" id="detalhe-trabalhista" style="display: none;">
+                <div class="area-detail-header">
+                    <div class="area-detail-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Direito Trabalhista</h3>
+                    <p>Assessoria preventiva e contenciosa em relações de trabalho</p>
+                </div>
+                
+                <div class="area-detail-content">
+                    <div class="area-detail-section">
+                        <h4><i class="fas fa-check-circle"></i> Serviços Oferecidos</h4>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <h5>Assessoria Preventiva</h5>
+                                <p>Elaboração de políticas internas, manuais, regulamentos e procedimentos trabalhistas.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Contratos de Trabalho</h5>
+                                <p>Elaboração e análise de contratos individuais, termos aditivos, acordos e convenções coletivas.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Negociação Coletiva</h5>
+                                <p>Assessoria em negociações sindicais, mediação de conflitos, acordos coletivos de trabalho.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Contencioso Trabalhista</h5>
+                                <p>Defesa em reclamações trabalhistas, recursos, execuções, acordos judiciais e extrajudiciais.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Compliance Trabalhista</h5>
+                                <p>Adequação às normas trabalhistas, auditorias preventivas, treinamentos para gestores.</p>
+                            </div>
+                            <div class="service-item">
+                                <h5>Reestruturação de Pessoal</h5>
+                                <p>Planejamento de desligamentos, programas de demissão voluntária, readequação de quadros.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="area-detail-section">
+                        <h4><i class="fas fa-bullseye"></i> Benefícios</h4>
+                        <ul>
+                            <li>Redução de passivos trabalhistas</li>
+                            <li>Prevenção de ações judiciais</li>
+                            <li>Melhoria no clima organizacional</li>
+                            <li>Conformidade com legislação trabalhista</li>
+                            <li>Otimização de custos com pessoal</li>
+                            <li>Segurança nas relações trabalhistas</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="area-detail-section">
+                        <h4><i class="fas fa-users"></i> Clientes Atendidos</h4>
+                        <ul>
+                            <li>Empresas com grande contingente de funcionários</li>
+                            <li>Indústrias e empresas do setor produtivo</li>
+                            <li>Redes varejistas e de serviços</li>
+                            <li>Empresas em processo de reestruturação</li>
+                            <li>Organizações com forte atuação sindical</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="area-detail-footer">
+                    <a href="#areas" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Voltar para Áreas</a>
+                    <a href="#contato" class="btn"><i class="fas fa-calendar-check"></i> Agendar Consulta</a>
+                </div>
+            </div>
+            
+            <!-- Outras áreas (serão adicionadas de forma similar) -->
         </div>
     </section>
 
@@ -865,7 +1491,7 @@
                         <h3>Dr. Lucas Gama</h3>
                         <span class="position">Sócio Fundador</span>
                         <p>Especialista em Direito Empresarial e Tributário. Mestre em Direito Comercial pela USP. Mais de 20 anos de experiência.</p>
-                        <a href="#" class="area-link">Ver Perfil Completo <i class="fas fa-arrow-right"></i></a>
+                        <a href="#perfil-lucas" class="area-link ver-perfil" data-perfil="lucas">Ver Perfil Completo <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -878,7 +1504,7 @@
                         <h3>Dra. Ana Silva</h3>
                         <span class="position">Sócia - Direito Trabalhista</span>
                         <p>Especialista em Direito do Trabalho e Processo Trabalhista. Experiência em grandes corporações nacionais e multinacionais.</p>
-                        <a href="#" class="area-link">Ver Perfil Completo <i class="fas fa-arrow-right"></i></a>
+                        <a href="#perfil-ana" class="area-link ver-perfil" data-perfil="ana">Ver Perfil Completo <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
@@ -891,8 +1517,243 @@
                         <h3>Dr. Ricardo Santos</h3>
                         <span class="position">Sócio - Direito Imobiliário</span>
                         <p>Especialista em Direito Imobiliário e Urbanístico. Atua há 15 anos com transações imobiliárias de grande porte.</p>
-                        <a href="#" class="area-link">Ver Perfil Completo <i class="fas fa-arrow-right"></i></a>
+                        <a href="#perfil-ricardo" class="area-link ver-perfil" data-perfil="ricardo">Ver Perfil Completo <i class="fas fa-arrow-right"></i></a>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Perfis Detalhados dos Sócios -->
+    <section class="section-padding profiles" id="perfis">
+        <div class="container">
+            <div class="section-title">
+                <h2>Perfis dos Sócios</h2>
+                <p>Conheça em detalhes a formação e experiência dos nossos sócios</p>
+            </div>
+            
+            <!-- Perfil 1 - Dr. Lucas Gama -->
+            <div class="profile-detail" id="perfil-lucas" style="display: none;">
+                <div class="profile-header">
+                    <div class="profile-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dr. Lucas Gama">
+                    </div>
+                    <div class="profile-basic-info">
+                        <h3>Dr. Lucas Gama</h3>
+                        <span class="profile-position">Sócio Fundador</span>
+                        <div class="profile-contact">
+                            <span><i class="fas fa-envelope"></i> lucas@gamaadvocacia.com.br</span>
+                            <span><i class="fas fa-phone"></i> (62) 99250-5600 (WhatsApp Direto)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="profile-section">
+                        <h4><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h4>
+                        <ul>
+                            <li>Mestrado em Direito Comercial - Universidade de São Paulo (USP)</li>
+                            <li>Pós-Graduação em Direito Empresarial - FGV Direito SP</li>
+                            <li>Bacharel em Direito - Universidade Federal do Maranhão (UFMA)</li>
+                            <li>Curso de Especialização em Arbitragem - CAMARB</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-briefcase"></i> Experiência Profissional</h4>
+                        <ul>
+                            <li><strong>2001 - Presente:</strong> Fundador e Sócio do Escritório Gama & Associados</li>
+                            <li><strong>1998 - 2001:</strong> Advogado Sênior no escritório Mendes & Silva Advogados</li>
+                            <li><strong>1995 - 1998:</strong> Consultor Jurídico na Federação das Indústrias do Maranhão</li>
+                            <li><strong>1993 - 1995:</strong> Estagiário no Tribunal de Justiça do Maranhão</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-star"></i> Especializações</h4>
+                        <div class="specializations">
+                            <span class="specialization-tag">Direito Empresarial</span>
+                            <span class="specialization-tag">Direito Tributário</span>
+                            <span class="specialization-tag">Fusões e Aquisições</span>
+                            <span class="specialization-tag">Contratos Empresariais</span>
+                            <span class="specialization-tag">Recuperação Judicial</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-award"></i> Destaques e Prêmios</h4>
+                        <ul>
+                            <li>Prêmio "Advogado do Ano" - Ordem dos Advogados do Brasil/MA (2019)</li>
+                            <li>Listado no Anuário dos Melhores Advogados do Brasil (2018-2023)</li>
+                            <li>Palestrante no Congresso Brasileiro de Direito Empresarial (2022)</li>
+                            <li>Autor do livro "Contratos Empresariais na Prática" (Editora Saraiva, 2020)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-users"></i> Atuações Marcantes</h4>
+                        <ul>
+                            <li>Representação de empresa nacional em processo de fusão internacional avaliado em R$ 500 milhões</li>
+                            <li>Assessoria em recuperação judicial de conglomerado industrial com mais de 2.000 empregados</li>
+                            <li>Consultoria para implementação de compliance em multinacional do setor alimentício</li>
+                            <li>Defesa bem-sucedida em caso de tributação internacional envolvendo transfer pricing</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="profile-footer">
+                    <a href="#equipe" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Voltar para Equipe</a>
+                    <a href="https://wa.me/5562992505600?text=Olá%20Dr.%20Lucas%20Gama!%20Gostaria%20de%20agendar%20uma%20consulta%20sobre%20Direito%20Empresarial." class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Direto</a>
+                </div>
+            </div>
+            
+            <!-- Perfil 2 - Dra. Ana Silva -->
+            <div class="profile-detail" id="perfil-ana" style="display: none;">
+                <div class="profile-header">
+                    <div class="profile-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dra. Ana Silva">
+                    </div>
+                    <div class="profile-basic-info">
+                        <h3>Dra. Ana Silva</h3>
+                        <span class="profile-position">Sócia - Direito Trabalhista</span>
+                        <div class="profile-contact">
+                            <span><i class="fas fa-envelope"></i> ana@gamaadvocacia.com.br</span>
+                            <span><i class="fas fa-phone"></i> (99) 99999-9999 (WhatsApp Direto)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="profile-section">
+                        <h4><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h4>
+                        <ul>
+                            <li>Especialização em Direito e Processo do Trabalho - Pontifícia Universidade Católica (PUC-SP)</li>
+                            <li>MBA em Gestão de Pessoas - Fundação Getúlio Vargas (FGV)</li>
+                            <li>Bacharel em Direito - Universidade Estadual do Maranhão (UEMA)</li>
+                            <li>Curso de Mediação e Conciliação - Escola Nacional de Mediação e Conciliação</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-briefcase"></i> Experiência Profissional</h4>
+                        <ul>
+                            <li><strong>2008 - Presente:</strong> Sócia do Escritório Gama & Associados</li>
+                            <li><strong>2003 - 2008:</strong> Gerente Jurídica Trabalhista na Indústria Textil Maranhense</li>
+                            <li><strong>2000 - 2003:</strong> Advogada Trabalhista no escritório Pereira & Associados</li>
+                            <li><strong>1998 - 2000:</strong> Estagiária no Tribunal Regional do Trabalho da 16ª Região</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-star"></i> Especializações</h4>
+                        <div class="specializations">
+                            <span class="specialization-tag">Direito do Trabalho</span>
+                            <span class="specialization-tag">Processo Trabalhista</span>
+                            <span class="specialization-tag">Negociação Coletiva</span>
+                            <span class="specialization-tag">Compliance Trabalhista</span>
+                            <span class="specialization-tag">Segurança do Trabalho</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-award"></i> Destaques e Prêmios</h4>
+                        <ul>
+                            <li>Medalha de Mérito - Associação dos Advogados Trabalhistas do Maranhão (2021)</li>
+                            <li>Palestrante no Congresso Nacional de Direito do Trabalho (2020, 2022)</li>
+                            <li>Consultora da Comissão de Reforma Trabalhista da Fecomércio/MA</li>
+                            <li>Autora de artigos publicados na Revista de Direito do Trabalho</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-users"></i> Atuações Marcantes</h4>
+                        <ul>
+                            <li>Negociação coletiva envolvendo mais de 5.000 trabalhadores da indústria de celulose</li>
+                            <li>Implementação de programa de compliance trabalhista em rede varejista nacional</li>
+                            <li>Assessoria em reestruturação societária com impacto em 2.500 empregados</li>
+                            <li>Defesa de empresa em ação coletiva com mais de 800 reclamantes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="profile-footer">
+                    <a href="#equipe" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Voltar para Equipe</a>
+                    <a href="https://wa.me/559999999999?text=Olá%20Dra.%20Ana%20Silva!%20Gostaria%20de%20agendar%20uma%20consulta%20sobre%20Direito%20Trabalhista." class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Direto</a>
+                </div>
+            </div>
+            
+            <!-- Perfil 3 - Dr. Ricardo Santos -->
+            <div class="profile-detail" id="perfil-ricardo" style="display: none;">
+                <div class="profile-header">
+                    <div class="profile-img">
+                        <img src="https://images.unsplash.com/photo-1562788869-4ed32648eb72?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Dr. Ricardo Santos">
+                    </div>
+                    <div class="profile-basic-info">
+                        <h3>Dr. Ricardo Santos</h3>
+                        <span class="profile-position">Sócio - Direito Imobiliário</span>
+                        <div class="profile-contact">
+                            <span><i class="fas fa-envelope"></i> ricardo@gamaadvocacia.com.br</span>
+                            <span><i class="fas fa-phone"></i> (99) 99999-9998 (WhatsApp Direto)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-content">
+                    <div class="profile-section">
+                        <h4><i class="fas fa-graduation-cap"></i> Formação Acadêmica</h4>
+                        <ul>
+                            <li>Especialização em Direito Imobiliário e Urbanístico - Universidade Presbiteriana Mackenzie</li>
+                            <li>MBA em Gestão Imobiliária - Instituto Brasileiro de Mercado de Capitais (IBMEC)</li>
+                            <li>Bacharel em Direito - Universidade Federal do Maranhão (UFMA)</li>
+                            <li>Curso de Regularização Fundiária - Escola da Advocacia-Geral da União</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-briefcase"></i> Experiência Profissional</h4>
+                        <ul>
+                            <li><strong>2010 - Presente:</strong> Sócio do Escritório Gama & Associados</li>
+                            <li><strong>2005 - 2010:</strong> Coordenador Jurídico na Construtora Nacional</li>
+                            <li><strong>2002 - 2005:</strong> Advogado Imobiliário no escritório Costa & Lima</li>
+                            <li><strong>2000 - 2002:</strong> Estagiário na Secretaria Municipal de Urbanismo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-star"></i> Especializações</h4>
+                        <div class="specializations">
+                            <span class="specialization-tag">Direito Imobiliário</span>
+                            <span class="specialization-tag">Direito Urbanístico</span>
+                            <span class="specialization-tag">Regularização Fundiária</span>
+                            <span class="specialization-tag">Incorporação Imobiliária</span>
+                            <span class="specialization-tag">Financiamentos Imobiliários</span>
+                        </div>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-award"></i> Destaques e Prêmios</h4>
+                        <ul>
+                            <li>Prêmio "Destaque em Direito Imobiliário" - Secovi/MA (2022)</li>
+                            <li>Membro da Comissão de Direito Imobiliário da OAB/MA</li>
+                            <li>Palestrante no Fórum Nacional de Incorporação Imobiliária (2021)</li>
+                            <li>Consultor do Programa de Regularização Fundiária do Estado do Maranhão</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="profile-section">
+                        <h4><i class="fas fa-users"></i> Atuações Marcantes</h4>
+                        <ul>
+                            <li>Regularização de condomínio residencial com mais de 500 unidades</li>
+                            <li>Assessoria em transação imobiliária comercial avaliada em R$ 200 milhões</li>
+                            <li>Due diligence em incorporação de complexo empresarial de 30.000 m²</li>
+                            <li>Consultoria para regularização de loteamento com mais de 1.000 lotes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="profile-footer">
+                    <a href="#equipe" class="btn btn-primary"><i class="fas fa-arrow-left"></i> Voltar para Equipe</a>
+                    <a href="https://wa.me/559999999998?text=Olá%20Dr.%20Ricardo%20Santos!%20Gostaria%20de%20agendar%20uma%20consulta%20sobre%20Direito%20Imobiliário." class="btn btn-whatsapp" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Direto</a>
                 </div>
             </div>
         </div>
@@ -928,13 +1789,50 @@
                             <span>Segunda a Sexta: 9h às 18h</span>
                         </div>
                     </div>
+
+                    <div class="whatsapp-options">
+                        <h4>Conversar por WhatsApp</h4>
+                        <div class="whatsapp-btn-group">
+                            <a href="https://wa.me/5599991426465?text=Olá!%20Gostaria%20de%20falar%20com%20o%20atendimento%20corporativo%20do%20Gama%20%26%20Associados." 
+                               class="whatsapp-option" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Atendimento Corporativo</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://wa.me/5562992505600?text=Olá%20Dr.%20Lucas%20Gama!%20Gostaria%20de%20agendar%20uma%20consulta." 
+                               class="whatsapp-option" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Dr. Lucas Gama (Sócio Fundador)</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://wa.me/559999999999?text=Olá%20Dra.%20Ana%20Silva!%20Gostaria%20de%20agendar%20uma%20consulta." 
+                               class="whatsapp-option" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Dra. Ana Silva (Direito Trabalhista)</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://wa.me/559999999998?text=Olá%20Dr.%20Ricardo%20Santos!%20Gostaria%20de%20agendar%20uma%20consulta." 
+                               class="whatsapp-option" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Dr. Ricardo Santos (Direito Imobiliário)</span>
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="contact-form">
                     <form id="form-contato">
                         <input type="text" placeholder="Seu Nome" required>
                         <input type="email" placeholder="Seu E-mail" required>
-                        <input type="tel" placeholder="Seu Telefone">
+                        <input type="tel" placeholder="Seu Telefone com WhatsApp">
+                        <select id="contato-socio" required>
+                            <option value="" disabled selected>Com quem deseja falar?</option>
+                            <option value="corporativo">Atendimento Corporativo</option>
+                            <option value="lucas">Dr. Lucas Gama - Sócio Fundador</option>
+                            <option value="ana">Dra. Ana Silva - Direito Trabalhista</option>
+                            <option value="ricardo">Dr. Ricardo Santos - Direito Imobiliário</option>
+                        </select>
                         <select required>
                             <option value="" disabled selected>Área de Interesse</option>
                             <option value="empresarial">Direito Empresarial</option>
@@ -961,7 +1859,7 @@
                     <p>Escritório de advocacia especializado em direito empresarial, com mais de 20 anos de experiência e compromisso com a excelência jurídica.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://www.instagram.com/santanaedantasadvocacia?igsh=d2wya3UxYnd2NDA3"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.instagram.com/santanaedantasadvocacia?igsh=d2wya3UxYnd2NDA3" target="_blank"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                     </div>
@@ -974,6 +1872,7 @@
                         <li><a href="#sobre"><i class="fas fa-chevron-right"></i> Sobre</a></li>
                         <li><a href="#areas"><i class="fas fa-chevron-right"></i> Áreas de Atuação</a></li>
                         <li><a href="#equipe"><i class="fas fa-chevron-right"></i> Equipe</a></li>
+                        <li><a href="#perfis"><i class="fas fa-chevron-right"></i> Perfis</a></li>
                         <li><a href="#contato"><i class="fas fa-chevron-right"></i> Contato</a></li>
                     </ul>
                 </div>
@@ -981,11 +1880,12 @@
                 <div class="footer-col">
                     <h3>Áreas de Atuação</h3>
                     <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Direito Empresarial</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Direito Tributário</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Direito Trabalhista</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Direito Imobiliário</a></li>
-                        <li><a href="#"><i class="fas fa-chevron-right"></i> Direito de Família</a></li>
+                        <li><a href="#detalhe-empresarial" class="ver-area" data-area="empresarial"><i class="fas fa-chevron-right"></i> Direito Empresarial</a></li>
+                        <li><a href="#detalhe-tributario" class="ver-area" data-area="tributario"><i class="fas fa-chevron-right"></i> Direito Tributário</a></li>
+                        <li><a href="#detalhe-trabalhista" class="ver-area" data-area="trabalhista"><i class="fas fa-chevron-right"></i> Direito Trabalhista</a></li>
+                        <li><a href="#detalhe-imobiliario" class="ver-area" data-area="imobiliario"><i class="fas fa-chevron-right"></i> Direito Imobiliário</a></li>
+                        <li><a href="#detalhe-familia" class="ver-area" data-area="familia"><i class="fas fa-chevron-right"></i> Direito de Família</a></li>
+                        <li><a href="#detalhe-digital" class="ver-area" data-area="digital"><i class="fas fa-chevron-right"></i> Direito Digital</a></li>
                     </ul>
                 </div>
             </div>
@@ -997,12 +1897,12 @@
         </div>
     </footer>
 
-    <!-- Botão WhatsApp -->
-    <a href="https://wa.me/5599991426465?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20um%20advogado." 
+    <!-- Botão WhatsApp (Corporativo) -->
+    <a href="https://wa.me/5599991426465?text=Olá!%20Gostaria%20de%20falar%20com%20o%20atendimento%20corporativo%20do%20Gama%20%26%20Associados." 
        class="whatsapp-button" 
        target="_blank">
         <i class="fab fa-whatsapp"></i>
-        <span class="tooltip">Fale conosco no WhatsApp</span>
+        <span class="tooltip">Atendimento Corporativo</span>
     </a>
 
     <script>
@@ -1035,9 +1935,28 @@
         
         // Formulário de Contato
         const contactForm = document.getElementById('form-contato');
+        const contatoSocioSelect = document.getElementById('contato-socio');
         
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
+            
+            // Obter o sócio selecionado
+            const socioSelecionado = contatoSocioSelect.value;
+            let mensagemSocio = '';
+            
+            switch(socioSelecionado) {
+                case 'lucas':
+                    mensagemSocio = 'Dr. Lucas Gama';
+                    break;
+                case 'ana':
+                    mensagemSocio = 'Dra. Ana Silva';
+                    break;
+                case 'ricardo':
+                    mensagemSocio = 'Dr. Ricardo Santos';
+                    break;
+                default:
+                    mensagemSocio = 'Atendimento Corporativo';
+            }
             
             // Simulação de envio
             const submitBtn = this.querySelector('button[type="submit"]');
@@ -1047,7 +1966,7 @@
             submitBtn.disabled = true;
             
             setTimeout(() => {
-                alert('Sua mensagem foi enviada com sucesso! Entraremos em contato em até 24 horas.');
+                alert(`Sua mensagem foi enviada com sucesso para ${mensagemSocio}! Entraremos em contato em até 24 horas.`);
                 contactForm.reset();
                 submitBtn.textContent = originalText;
                 submitBtn.disabled = false;
@@ -1101,8 +2020,129 @@
         if (yearElement) {
             yearElement.innerHTML = yearElement.innerHTML.replace('2023', currentYear);
         }
+
+        // Sistema de Navegação entre Perfis
+        document.querySelectorAll('.ver-perfil').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Esconde todos os perfis e áreas
+                document.querySelectorAll('.profile-detail').forEach(perfil => {
+                    perfil.style.display = 'none';
+                });
+                document.querySelectorAll('.area-detail').forEach(area => {
+                    area.style.display = 'none';
+                });
+                
+                // Mostra o perfil correto
+                const perfilId = this.getAttribute('data-perfil');
+                const perfilElement = document.getElementById(`perfil-${perfilId}`);
+                if (perfilElement) {
+                    perfilElement.style.display = 'block';
+                    
+                    // Rola suavemente para a seção de perfis
+                    const perfisSection = document.getElementById('perfis');
+                    if (perfisSection) {
+                        window.scrollTo({
+                            top: perfisSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Sistema de Navegação entre Áreas
+        document.querySelectorAll('.ver-area').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Esconde todos os perfis e áreas
+                document.querySelectorAll('.profile-detail').forEach(perfil => {
+                    perfil.style.display = 'none';
+                });
+                document.querySelectorAll('.area-detail').forEach(area => {
+                    area.style.display = 'none';
+                });
+                
+                // Mostra a área correta
+                const areaId = this.getAttribute('data-area');
+                const areaElement = document.getElementById(`detalhe-${areaId}`);
+                if (areaElement) {
+                    areaElement.style.display = 'block';
+                    
+                    // Rola suavemente para a seção de detalhes
+                    const detalhesSection = document.getElementById('detalhes-areas');
+                    if (detalhesSection) {
+                        window.scrollTo({
+                            top: detalhesSection.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Verificar se há parâmetro na URL para mostrar um perfil ou área específica
+        window.addEventListener('load', function() {
+            const hash = window.location.hash;
+            
+            if (hash && hash.startsWith('#perfil-')) {
+                const perfilId = hash.replace('#perfil-', '');
+                const perfilElement = document.getElementById(`perfil-${perfilId}`);
+                if (perfilElement) {
+                    // Esconde todos os perfis e áreas
+                    document.querySelectorAll('.profile-detail').forEach(perfil => {
+                        perfil.style.display = 'none';
+                    });
+                    document.querySelectorAll('.area-detail').forEach(area => {
+                        area.style.display = 'none';
+                    });
+                    
+                    // Mostra o perfil correto
+                    perfilElement.style.display = 'block';
+                    
+                    // Rola suavemente para a seção de perfis
+                    const perfisSection = document.getElementById('perfis');
+                    if (perfisSection) {
+                        setTimeout(() => {
+                            window.scrollTo({
+                                top: perfisSection.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }, 300);
+                    }
+                }
+            }
+            
+            if (hash && hash.startsWith('#detalhe-')) {
+                const areaId = hash.replace('#detalhe-', '');
+                const areaElement = document.getElementById(`detalhe-${areaId}`);
+                if (areaElement) {
+                    // Esconde todos os perfis e áreas
+                    document.querySelectorAll('.profile-detail').forEach(perfil => {
+                        perfil.style.display = 'none';
+                    });
+                    document.querySelectorAll('.area-detail').forEach(area => {
+                        area.style.display = 'none';
+                    });
+                    
+                    // Mostra a área correta
+                    areaElement.style.display = 'block';
+                    
+                    // Rola suavemente para a seção de detalhes
+                    const detalhesSection = document.getElementById('detalhes-areas');
+                    if (detalhesSection) {
+                        setTimeout(() => {
+                            window.scrollTo({
+                                top: detalhesSection.offsetTop - 80,
+                                behavior: 'smooth'
+                            });
+                        }, 300);
+                    }
+                }
+            }
+        });
     </script>
 </body>
-
 </html>
-
