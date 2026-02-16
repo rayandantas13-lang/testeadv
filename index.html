@@ -919,35 +919,97 @@
             font-size: 0.9rem;
         }
 
-        /* Botões WhatsApp */
-        .whatsapp-button {
+        /* WhatsApp Float com Expansão */
+        .whatsapp-float-container {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            background-color: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .whatsapp-float-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 15px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float-container.active .whatsapp-float-buttons {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .whatsapp-float-button {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background-color: white;
+            color: var(--dark);
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            min-width: 200px;
+        }
+
+        .whatsapp-float-button i {
+            font-size: 1.3rem;
+            color: #25D366;
+        }
+
+        .whatsapp-float-button:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            background-color: #f8f8f8;
+        }
+
+        .whatsapp-float-main {
+            width: 65px;
+            height: 65px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            border: none;
             border-radius: 50%;
+            color: white;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-            text-decoration: none;
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-        
-        .whatsapp-button:hover {
-            background-color: #1da851;
-            transform: scale(1.1);
-            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+            border: 2px solid white;
         }
 
-        .whatsapp-button .tooltip {
+        .whatsapp-float-main:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+        }
+
+        .whatsapp-float-main i {
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float-container.active .whatsapp-float-main i {
+            transform: rotate(45deg);
+        }
+
+        /* Tooltip para o botão principal */
+        .whatsapp-float-main::after {
+            content: 'Contatos';
             position: absolute;
-            right: 70px;
+            right: 80px;
             background-color: var(--primary);
             color: white;
             padding: 8px 15px;
@@ -959,8 +1021,8 @@
             pointer-events: none;
             font-weight: 500;
         }
-        
-        .whatsapp-button:hover .tooltip {
+
+        .whatsapp-float-main:hover::after {
             opacity: 1;
         }
 
@@ -999,6 +1061,24 @@
             
             .service-list {
                 grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float-button {
+                min-width: 180px;
+                padding: 10px 16px;
+                font-size: 0.85rem;
+            }
+            
+            .whatsapp-float-main {
+                width: 55px;
+                height: 55px;
+                font-size: 24px;
+            }
+            
+            .whatsapp-float-main::after {
+                right: 70px;
+                font-size: 12px;
+                padding: 6px 12px;
             }
         }
 
@@ -1079,6 +1159,11 @@
             .whatsapp-btn-group {
                 flex-direction: column;
             }
+            
+            .whatsapp-float-button {
+                min-width: 160px;
+                font-size: 0.8rem;
+            }
         }
 
         @media (max-width: 576px) {
@@ -1105,6 +1190,16 @@
             .footer-container {
                 grid-template-columns: 1fr;
                 gap: 30px;
+            }
+            
+            .whatsapp-float-button {
+                min-width: 140px;
+                padding: 8px 12px;
+                font-size: 0.75rem;
+            }
+            
+            .whatsapp-float-button i {
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -1790,21 +1885,25 @@
         </div>
     </footer>
 
-    <!-- Botão WhatsApp Flutuante Duplo (Opcional) -->
-    <div style="position: fixed; bottom: 30px; right: 30px; display: flex; flex-direction: column; gap: 15px; z-index: 1000;">
-        <a href="https://wa.me/5599991456703?text=Ol%C3%A1%20Dra.%20Fernanda%20Dantas!%20Gostaria%20de%20falar%20sobre%20uma%20consulta." 
-           class="whatsapp-button" 
-           target="_blank" style="position: relative; margin-bottom: 0;">
-            <i class="fab fa-whatsapp"></i>
-            <span class="tooltip" style="right: 70px; white-space: nowrap;">Falar com Dra. Fernanda</span>
-        </a>
+    <!-- Botão WhatsApp Flutuante com Expansão -->
+    <div class="whatsapp-float-container">
+        <div class="whatsapp-float-buttons">
+            <a href="https://wa.me/5599991456703?text=Ol%C3%A1%20Dra.%20Fernanda%20Dantas!%20Gostaria%20de%20agendar%20uma%20consulta." 
+               class="whatsapp-float-button whatsapp-fernanda" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span>Dra. Fernanda Dantas</span>
+            </a>
+            
+            <a href="https://wa.me/5599984042123?text=Ol%C3%A1%20Dr.%20Thiago%20Lopes!%20Gostaria%20de%20agendar%20uma%20consulta%20sobre%20Direito%20Tribut%C3%A1rio." 
+               class="whatsapp-float-button whatsapp-thiago" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <span>Dr. Thiago Lopes</span>
+            </a>
+        </div>
         
-        <a href="https://wa.me/5599984042123?text=Ol%C3%A1%20Dr.%20Thiago%20Lopes!%20Gostaria%20de%20falar%20sobre%20uma%20consulta." 
-           class="whatsapp-button" 
-           target="_blank" style="position: relative; background-color: #075e54;">
-            <i class="fab fa-whatsapp"></i>
-            <span class="tooltip" style="right: 70px; white-space: nowrap;">Falar com Dr. Thiago</span>
-        </a>
+        <button class="whatsapp-float-main" id="whatsapp-float-toggle">
+            <i class="fas fa-plus" id="whatsapp-float-icon"></i>
+        </button>
     </div>
 
     <script>
@@ -1961,6 +2060,31 @@
             });
         });
 
+        // WhatsApp Float Toggle
+        const whatsappToggle = document.getElementById('whatsapp-float-toggle');
+        const whatsappContainer = document.querySelector('.whatsapp-float-container');
+
+        if (whatsappToggle) {
+            whatsappToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                whatsappContainer.classList.toggle('active');
+            });
+            
+            // Fechar ao clicar fora
+            document.addEventListener('click', function(e) {
+                if (!whatsappContainer.contains(e.target)) {
+                    whatsappContainer.classList.remove('active');
+                }
+            });
+            
+            // Impedir que o clique nos botões feche o container
+            document.querySelectorAll('.whatsapp-float-button').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            });
+        }
+
         // Verificar se há parâmetro na URL para mostrar um perfil ou área específica
         window.addEventListener('load', function() {
             const hash = window.location.hash;
@@ -2018,6 +2142,3 @@
     </script>
 </body>
 </html>
-
-
-
